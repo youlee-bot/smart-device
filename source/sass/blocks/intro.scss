@@ -3,7 +3,7 @@
 
   @media (max-width: $vp-768) {
     background: url("../../img/template-images/intro-mobile.jpg") no-repeat, linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%);
-    min-height: 580px;
+    min-height: 495px;
     background-size: 100vw;
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background: url("../../img/template-images/intro-mobile@2x.jpg") no-repeat, linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%);
@@ -46,8 +46,9 @@
 }
 
 .intro__container {
+  display: grid;
   @media (max-width: $vp-768) {
-
+    justify-items: center;
   }
 
   @media (min-width: $vp-768) {
@@ -66,9 +67,11 @@
 
 .intro__title {
   @media (max-width: $vp-768) {
+    margin: 0;
+    padding: 85px 0 0;
     font-style: normal;
     font-weight: 700;
-    font-size: 36px;
+    font-size: 30px;
     line-height: 42px;
     letter-spacing: 0.07em;
     text-transform: uppercase;
@@ -118,6 +121,7 @@
 
 .intro__description {
   @media (max-width: $vp-768) {
+    margin: 10px 0;
     font-family: 'PT Mono', "Arial", sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -172,7 +176,7 @@
 
 .intro__button-wrapper {
   @media (max-width: $vp-768) {
-
+    padding: 33px 0;
   }
 
   @media (min-width: $vp-768) {
@@ -191,7 +195,22 @@
 
 .intro__button {
   @media (max-width: $vp-768) {
+    width: 270px;
+    height: 40px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
 
+    background: #00B2FF;
+    border-radius: 3px;
+    font-weight: 700;
+    font-size: 15.5px;
+    line-height: 21px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+
+    color: #F2F5F7;
   }
 
   @media (min-width: $vp-768) {

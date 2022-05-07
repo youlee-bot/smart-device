@@ -5,12 +5,12 @@
   display: grid;
 
   @media (max-width: $vp-768) {
-
+    margin: 32px 0;
   }
 
   @media (min-width: $vp-768)  {
     grid-template-areas: "name phone" " textarea textarea" "button checkbox";
-    margin: 20px 0;
+    margin: 2.59vw 0;
   }
 
   @media (min-width: $vp-1024) {
@@ -29,13 +29,14 @@
   color: #FFFFFF;
 
   @media (max-width: $vp-768) {
-    width: 270px;
+    width: 100%;
     height: 50px;
+    text-indent: 12px;
   }
 
   @media (min-width: $vp-768)  {
-    width: 320px;
-    height: 50px;
+    width: 41.55vw;
+    height: 6.49vw;
     text-indent: 12px;
   }
 
@@ -62,6 +63,8 @@
 
   @media (max-width: $vp-768) {
     width: 100%;
+    padding: 25px 17px;
+    height: 180px;
   }
 
   @media (min-width: $vp-768)  {
@@ -106,12 +109,12 @@
 
 .contacts-form__phone-wrapper {
   @media (max-width: $vp-768) {
-
+    margin-top: 20px;
   }
 
   @media (min-width: $vp-768)  {
     grid-area: phone;
-    margin-left: 30px;
+    margin-left: 3.89vw;
   }
 
   @media (min-width: $vp-1024) {
@@ -127,7 +130,7 @@
 
 .contacts-form__textarea-wrapper {
   @media (max-width: $vp-768) {
-
+    margin-top: 20px;
   }
 
   @media (min-width: $vp-768)  {
@@ -146,7 +149,7 @@
 
 .contacts-form__button-wrapper {
   @media (max-width: $vp-768) {
-
+    margin-top: 22px;
   }
 
   @media (min-width: $vp-768)  {
@@ -167,13 +170,13 @@
 
 .contacts-form__personal-data-wrapper {
   @media (max-width: $vp-768) {
-
+    margin: 16px 0 0 30px;
   }
 
   @media (min-width: $vp-768)  {
     grid-area: checkbox;
     margin: 28px 0 0 58px;
-    width: 220px;
+    width: 28.57vw;
   }
 
   @media (min-width: $vp-1024) {
@@ -194,8 +197,8 @@
   position: relative;
 
   @media (max-width: $vp-768) {
-    font-size: 14px;
-    line-height: 16px;
+    font-size: 16.5px;
+    line-height: 12px;
   }
 
   @media (min-width: $vp-768)  {
@@ -226,7 +229,7 @@
   text-transform: uppercase;
 
   @media (max-width: $vp-768) {
-
+    padding: 12px 66px;
   }
 
   @media (min-width: $vp-768)  {
@@ -273,7 +276,8 @@
   border: 1px solid #FFFFFF;
   border-radius: 2px;
   @media (max-width: $vp-768) {
-
+    left: - 25px;
+    top: 13px;
   }
 
   @media (min-width: $vp-768){
@@ -300,7 +304,8 @@
   background: url("../../img/svg/mark.svg") no-repeat center center;
 
   @media (max-width: $vp-768) {
-
+    left: - 22px;
+    top: 19px;
   }
 
   @media (min-width: $vp-768){

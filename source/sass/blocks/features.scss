@@ -7,6 +7,9 @@
 
   @media (max-width: $vp-768) {
     flex-direction: column;
+    padding: 33px 0 0;
+    margin: 16px 0 0;
+    gap: normal;
   }
 
   @media (min-width: $vp-768)  {
@@ -17,10 +20,12 @@
 
   @media (min-width: $vp-1024) {
     padding: 55px 0;
+    gap: 1.56vw;
   }
 
   @media (min-width: $vp-1920) {
     padding: 55px 0;
+    gap: 30px;
   }
 }
 
@@ -29,7 +34,11 @@
 
   @media (max-width: $vp-768) {
     width: 100%;
-    min-height: 320px;
+    min-height: 325px;
+    padding: 30px 30px 35px 27px;
+    box-shadow: -5px 0px 0px 0px #00B2FF;
+    margin-left: 5px;
+    margin-bottom: 34px;
   }
 
   @media (min-width: $vp-768)  {
@@ -54,9 +63,36 @@
   }
 }
 
+.features__item-wrapper {
+  @media (max-width: $vp-768) {
+    display: grid;
+    grid-auto-rows: min-content;
+    grid-auto-columns: 100%;
+    min-height: 260px;
+  }
+
+  @media (min-width: $vp-768){
+
+  }
+
+  @media (min-width: $vp-1024) {
+
+  }
+
+  @media (min-width: $vp-1920) {
+
+  }
+
+}
+
 .features__h3 {
   @media (max-width: $vp-768) {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
 
+    color: #00B2FF;
+    margin: 18px 0 10px 0;
   }
 
   @media (min-width: $vp-768){
@@ -67,6 +103,10 @@
 
     color: #00B2FF;
     margin: 7px 0 0 0;
+
+    &br {
+      display: none;
+    }
   }
 
   @media (min-width: $vp-1024) {
@@ -91,7 +131,16 @@
 
 .features__description {
   @media (max-width: $vp-768) {
-
+    margin: 0;
+    padding-bottom: 31px;
+    width: 65.31vw;
+    font-family: 'PT Mono', Arial sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 135%;
+    /* or 19px */
+    color: #041827;
   }
 
   @media (min-width: $vp-768){
@@ -117,6 +166,29 @@
 
   @media (min-width: $vp-1920) {
     width: 505px;
+  }
+
+}
+
+.features__item-image {
+  @media (max-width: $vp-768) {
+    width: 30px;
+    height: 30px;
+  }
+
+  @media (min-width: $vp-768){
+    width: 35px;
+    height: 35px;
+  }
+
+  @media (min-width: $vp-1024) {
+    width: 35px;
+    height: 35px;
+  }
+
+  @media (min-width: $vp-1920) {
+    width: 35px;
+    height: 35px;
   }
 
 }

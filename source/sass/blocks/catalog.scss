@@ -22,8 +22,8 @@
   @media (max-width: $vp-768) {
     font-style: normal;
     font-weight: 400;
-    font-size: 28px;
-    line-height: 140.62%;
+    font-size: 25px;
+    line-height:  40px;
     /* or 39px */
 
 
@@ -58,14 +58,15 @@
   flex-wrap: wrap;
   padding: 0;
   margin: 0;
+  align-items: center;
 
   @media (max-width: $vp-768) {
+    padding-top: 10px;
     gap: 30px;
   }
 
   @media (min-width: $vp-768)  {
     padding-top: 10px;
-    flex-direction: row;
     gap: 30px;
   }
 
@@ -88,23 +89,23 @@
   justify-content: space-between;
 
   @media (max-width: $vp-768) {
-    width: 82.08vw;
-    min-height: 75.99vw;
+    width: 270px;
+    height: 250px;
   }
 
   @media (min-width: $vp-768)  {
-    width: 87.01vw;
-    min-height: 32.47px;
+    width: 670px;
+    height: 250px;
   }
 
   @media (min-width: $vp-1024) {
-    width: 18.23vw;
-    min-height: 33.85vw;
+    width: 350px;
+    height: 650px;
   }
 
   @media (min-width: $vp-1920) {
     width: 350px;
-    min-height: 650px;
+    height: 650px;
   }
 }
 
@@ -140,13 +141,19 @@ z-index: 2;
 
 .catalog__link-text {
   position: absolute;
-
+  color: #FFFFFF;
   &::-webkit-scrollbar {
   display: none;
 }
 
   @media (max-width: $vp-768) {
-
+    width: 270px;
+    height: 250px;
+    padding: 25px 30px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 30px;
 }
 
   @media (min-width: $vp-768){
@@ -171,8 +178,6 @@ z-index: 2;
     line-height: 30px;
     /* or 150% */
 
-
-    color: #FFFFFF;
   }
 
   @media (min-width: $vp-1920) {
