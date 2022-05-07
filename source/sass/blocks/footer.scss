@@ -1,0 +1,66 @@
+.footer {
+  background: #041827;
+  color: #FFFFFF;
+}
+
+.footer__container {
+  display: grid;
+
+  @media (max-width: $vp-768) {
+    grid-template-areas: "logo" "icons" "menu" "address";
+  }
+
+  @media (min-width: $vp-768)  {
+    grid-template-areas: "logo icons" "menu address";
+  }
+
+  @media (min-width: $vp-1024) {
+    grid-template-areas: "logo menu address" "icons menu address";
+  }
+
+  @media (min-width: $vp-1920) {
+    grid-template-areas: "logo menu address" "icons menu address";
+  }
+}
+
+.footer__logo {
+  grid-area: logo;
+}
+
+.footer__social-icons {
+  grid-area: icons;
+}
+
+.footer__menu {
+  grid-area: menu;
+}
+
+.footer__menu-title {
+}
+
+.footer__menu-list {
+}
+
+.footer__menu-item {
+}
+
+.footer__menu-link {
+  color: #FFFFFF;
+}
+
+.footer__address {
+  grid-area: address;
+}
+
+.footer__address-title {
+}
+
+.footer__address-list {
+}
+
+.footer__address-item {
+}
+
+.footer__address-link {
+  color: #FFFFFF;
+}

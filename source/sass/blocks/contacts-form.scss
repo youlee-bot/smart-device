@@ -1,0 +1,320 @@
+.contacts-form {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  user-select: none;
+  display: grid;
+
+  @media (max-width: $vp-768) {
+
+  }
+
+  @media (min-width: $vp-768)  {
+    grid-template-areas: "name phone" " textarea textarea" "button checkbox";
+    margin: 20px 0;
+  }
+
+  @media (min-width: $vp-1024) {
+    margin: 38px 0;
+  }
+
+  @media (min-width: $vp-1920) {
+
+  }
+}
+
+.contacts-form__input {
+  background: #019BDF;
+  border-radius: 3px;
+  border: none;
+  color: #FFFFFF;
+
+  @media (max-width: $vp-768) {
+    width: 270px;
+    height: 50px;
+  }
+
+  @media (min-width: $vp-768)  {
+    width: 320px;
+    height: 50px;
+    text-indent: 12px;
+  }
+
+  @media (min-width: $vp-1024) {
+    width: 275px;
+    height: 50px;
+  }
+
+  @media (min-width: $vp-1920) {
+
+  }
+}
+
+.contacts-form__input::placeholder {
+  color: #FFFFFF;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.contacts-form__textarea {
+  background: #019BDF;
+  border-radius: 3px;
+  border: none;
+
+  @media (max-width: $vp-768) {
+    width: 100%;
+  }
+
+  @media (min-width: $vp-768)  {
+    width: 100%;
+    padding: 32px 17px;
+    height: 158px;
+  }
+
+  @media (min-width: $vp-1024) {
+    height: 150px;
+    width: 100%;
+    padding: 22px 17px;
+  }
+
+  @media (min-width: $vp-1920) {
+  }
+}
+
+.contacts-form__textarea::placeholder {
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.contacts-form__name-wrapper {
+  @media (max-width: $vp-768) {
+
+  }
+
+  @media (min-width: $vp-768)  {
+    grid-area: name;
+  }
+
+  @media (min-width: $vp-1024) {
+    grid-area: name;
+  }
+
+  @media (min-width: $vp-1920) {
+    grid-area: name;
+  }
+}
+
+.contacts-form__phone-wrapper {
+  @media (max-width: $vp-768) {
+
+  }
+
+  @media (min-width: $vp-768)  {
+    grid-area: phone;
+    margin-left: 30px;
+  }
+
+  @media (min-width: $vp-1024) {
+    grid-area: phone;
+    margin-left: 52px;
+  }
+
+  @media (min-width: $vp-1920) {
+    margin-left: 30px;
+  }
+
+}
+
+.contacts-form__textarea-wrapper {
+  @media (max-width: $vp-768) {
+
+  }
+
+  @media (min-width: $vp-768)  {
+    grid-area: textarea;
+    margin-top: 20px;
+  }
+
+  @media (min-width: $vp-1024) {
+    grid-area: textarea;
+  }
+
+  @media (min-width: $vp-1920) {
+  }
+
+}
+
+.contacts-form__button-wrapper {
+  @media (max-width: $vp-768) {
+
+  }
+
+  @media (min-width: $vp-768)  {
+    grid-area: button;
+    margin-top: 27px;
+  }
+
+  @media (min-width: $vp-1024) {
+    grid-area: button;
+    margin-top: 30px;
+  }
+
+  @media (min-width: $vp-1920) {
+
+  }
+
+}
+
+.contacts-form__personal-data-wrapper {
+  @media (max-width: $vp-768) {
+
+  }
+
+  @media (min-width: $vp-768)  {
+    grid-area: checkbox;
+    margin: 28px 0 0 58px;
+    width: 220px;
+  }
+
+  @media (min-width: $vp-1024) {
+    grid-area: checkbox;
+    margin: 37px 0 0 65px;
+    width: auto;
+  }
+
+  @media (min-width: $vp-1920) {
+
+  }
+
+}
+
+.contacts-form__personal-data {
+  color: #FFFFFF;
+  opacity: 0.8;
+  position: relative;
+
+  @media (max-width: $vp-768) {
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  @media (min-width: $vp-768)  {
+    font-size: 16.5px;
+    line-height: 16px;
+
+  }
+
+  @media (min-width: $vp-1024) {
+    font-size: 16.5px;
+    line-height: 17px;
+  }
+
+  @media (min-width: $vp-1920) {
+
+  }
+}
+
+.contacts-form__button {
+  background: #041427;
+  border-radius: 3px;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 19px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
+  @media (max-width: $vp-768) {
+
+  }
+
+  @media (min-width: $vp-768)  {
+    padding: 12px 65px;
+  }
+
+  @media (min-width: $vp-1024) {
+
+    padding: 12px 65px;
+  }
+
+  @media (min-width: $vp-1920) {
+
+  }
+}
+
+.contacts-form__personal-data-checkbox {
+  display: none;
+  @media (max-width: $vp-768) {
+
+  }
+
+  @media (min-width: $vp-768){
+
+  }
+
+  @media (min-width: $vp-1024) {
+
+  }
+
+  @media (min-width: $vp-1920) {
+
+  }
+}
+
+
+.contacts-form__personal-data-checkbox + .contacts-form__personal-data:before {
+  position: absolute;
+  content: "";
+  width: 14.94px;
+  height: 15px;
+
+
+  border: 1px solid #FFFFFF;
+  border-radius: 2px;
+  @media (max-width: $vp-768) {
+
+  }
+
+  @media (min-width: $vp-768){
+    left: - 30px;
+    top: 13px;
+  }
+
+  @media (min-width: $vp-1024) {
+    left: - 25px;
+    top: 13px;
+  }
+
+  @media (min-width: $vp-1920) {
+
+  }
+
+}
+
+.contacts-form__personal-data-checkbox:checked + .contacts-form__personal-data:after {
+  position: absolute;
+  content: "";
+  width: 6.97px;
+  height: 4px;
+  background: url("../../img/svg/mark.svg") no-repeat center center;
+
+  @media (max-width: $vp-768) {
+
+  }
+
+  @media (min-width: $vp-768){
+    left: - 27px;
+    top: 19px;
+  }
+
+  @media (min-width: $vp-1024) {
+    left: - 22px;
+    top: 19px;
+  }
+
+  @media (min-width: $vp-1920) {
+
+  }
+
+}

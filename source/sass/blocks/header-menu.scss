@@ -1,0 +1,44 @@
+.header-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  @media (max-width: $vp-768) {
+
+  }
+
+  @media (min-width: $vp-768){
+    padding-top: 10px;
+    justify-content: flex-end;
+  }
+
+  @media (min-width: $vp-1024) {
+    padding: 0 0 20px 0;
+    justify-content: flex-start;
+  }
+
+  @media (min-width: $vp-1920) {
+
+  }
+}
+
+.header__menu-item {
+  display: flex;
+  @media (max-width: $vp-768) {
+
+  }
+
+  @media (min-width: $vp-768){
+    padding-right: 35px;
+  }
+
+  @media (min-width: $vp-1024) {
+    padding: 0;
+  }
+
+  @media (min-width: $vp-1920) {
+
+  }
+
+}

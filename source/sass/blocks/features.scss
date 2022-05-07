@@ -1,0 +1,122 @@
+.features__list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+
+  @media (max-width: $vp-768) {
+    flex-direction: column;
+  }
+
+  @media (min-width: $vp-768)  {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 63px 0;
+  }
+
+  @media (min-width: $vp-1024) {
+    padding: 55px 0;
+  }
+
+  @media (min-width: $vp-1920) {
+    padding: 55px 0;
+  }
+}
+
+.features__item {
+  box-sizing: border-box;
+
+  @media (max-width: $vp-768) {
+    width: 100%;
+    min-height: 320px;
+  }
+
+  @media (min-width: $vp-768)  {
+    width: 314.5px;
+    min-height: 360px;
+    padding: 42px 0 0 43px;
+    box-shadow: -5px 0px 0px 0px #00B2FF;
+    margin-left: 5px;
+  }
+
+  @media (min-width: $vp-1024) {
+    width: 30vw;
+    min-height: 300px;
+  }
+
+  @media (min-width: $vp-1920) {
+    width: 590px;
+    min-height: 300px;
+    padding: 42px 0 0 43px;
+    margin-left: 5px;
+    box-shadow: -5px 0px 0px 0px #00B2FF;
+  }
+}
+
+.features__h3 {
+  @media (max-width: $vp-768) {
+
+  }
+
+  @media (min-width: $vp-768){
+    font-weight: 400;
+    font-size: 21.5px;
+    line-height: 140%;
+    /* or 34px */
+
+    color: #00B2FF;
+    margin: 7px 0 0 0;
+  }
+
+  @media (min-width: $vp-1024) {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 140%;
+    /* or 34px */
+    color: #00B2FF;
+    margin: 0.52vw 0 0 0;
+  }
+
+  @media (min-width: $vp-1920) {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 140%;
+    /* or 34px */
+    color: #00B2FF;
+    margin: 10px 0 0 0;
+  }
+
+}
+
+.features__description {
+  @media (max-width: $vp-768) {
+
+  }
+
+  @media (min-width: $vp-768){
+    margin: 10px 0;
+    font-family: 'PT Mono', Arial sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 135%;
+    word-spacing: 3px;
+    /* or 22px */
+
+
+    color: #041827;
+    width: 245px;
+  }
+
+  @media (min-width: $vp-1024) {
+    word-spacing: 0;
+    margin: 16px 0;
+    width: 26.3vw;
+  }
+
+  @media (min-width: $vp-1920) {
+    width: 505px;
+  }
+
+}

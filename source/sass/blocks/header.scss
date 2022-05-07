@@ -1,0 +1,226 @@
+.header {
+  background: linear-gradient(180deg, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
+  width: 100vw;
+  color: white;
+  z-index: 10;
+  box-sizing: border-box;
+
+  @media (max-width: $vp-768) {
+    min-height: 70px;
+  }
+
+  @media (min-width: $vp-768)  {
+    min-height: 100px;
+  }
+
+  @media (min-width: $vp-1024) {
+    min-height: 120px;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+  @media (min-width: $vp-1920) {
+    min-height: 120px;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+}
+
+.header__container {
+  display: grid;
+
+  @media (max-width: $vp-768) {
+    grid-template-areas: "logo menu";
+  }
+
+  @media (min-width: $vp-768)  {
+    grid-template-areas: "logo menu";
+    padding: 2.6vw 0;
+    grid-auto-columns: min-content 1fr;
+  }
+
+  @media (min-width: $vp-1024) {
+    padding-top: 1.56vw;
+    grid-template-areas: "logo menu button";
+    grid-auto-columns: min-content 1fr min-content;
+  }
+
+  @media (min-width: $vp-1920) {
+    padding-top: 30px;
+    grid-template-areas: "logo menu button";
+    grid-auto-columns: min-content 1fr 300px;
+  }
+}
+
+.header__logo-container {
+  grid-area: logo;
+}
+
+.header__menu-container {
+  grid-area: menu;
+  @media (max-width: $vp-768) {
+
+  }
+
+  @media (min-width: $vp-768)  {
+
+  }
+
+  @media (min-width: $vp-1024) {
+    margin: auto 0;
+  }
+
+  @media (min-width: $vp-1920) {
+    margin: auto 0;
+  }
+}
+
+.header__button-container {
+  @media (max-width: $vp-768) {
+    display: none;
+  }
+
+  @media (min-width: $vp-768)  {
+    display: none;
+  }
+
+  @media (min-width: $vp-1024) {
+    grid-area: button;
+    display: block;
+    width: 160px;
+  }
+
+  @media (min-width: $vp-1920) {
+    grid-area: button;
+    width: 160px;
+  }
+}
+
+.header-menu__button {
+  @media (max-width: $vp-768) {
+    display: none;
+  }
+
+  @media (min-width: $vp-768)  {
+    display: none;
+  }
+
+  @media (min-width: $vp-1024) {
+    display: block;
+    border: 1px solid #F2F5F7;
+    box-sizing: border-box;
+    border-radius: 3px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    background: #041827;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+
+    color: #F2F5F7;
+
+    min-width: 160px;
+    min-height: 40px;
+    margin: 0.26vw 0 0 0;
+  }
+
+  @media (min-width: $vp-1920) {
+    border: 1px solid #F2F5F7;
+    box-sizing: border-box;
+    border-radius: 3px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    background: #041827;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+
+    color: #F2F5F7;
+
+    min-width: 160px;
+    min-height: 40px;
+    margin: 5px 0 0 75px;
+  }
+}
+
+.header__menu-list {
+  @media (max-width: $vp-768) {
+
+  }
+
+  @media (min-width: $vp-768)  {
+
+  }
+
+  @media (min-width: $vp-1024) {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.26vw 0 0 0;
+  }
+
+  @media (min-width: $vp-1920) {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px 0 0 40px;
+  }
+}
+
+.header__menu-item {
+  @media (max-width: $vp-768) {
+
+  }
+
+  @media (min-width: $vp-768)  {
+
+  }
+
+  @media (min-width: $vp-1024) {
+    margin: 0 0 0 20px;
+  }
+
+  @media (min-width: $vp-1920) {
+    margin: 0 0 0 120px;
+  }
+}
+
+.header-menu__link {
+  @media (max-width: $vp-768) {
+
+  }
+
+  @media (min-width: $vp-768)  {
+    display: none;
+  }
+
+  @media (min-width: $vp-1024) {
+    display: block;
+    margin-left: 1.04vw;
+    font-family: 'PT Mono', Arial sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: 0.4px;
+
+    color: #F2F5F7;
+  }
+
+  @media (min-width: $vp-1920) {
+    margin-left: 15px;
+    font-family: 'PT Mono', Arial sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: 0.4px;
+
+    color: #F2F5F7;
+  }
+}
