@@ -1,4 +1,4 @@
-.wrapper{
+.wrapper {
   display: grid;
 }
 
@@ -12,7 +12,7 @@
     margin: -20px 0 0 0;
   }
 
-  @media (min-width: $vp-768)  {
+  @media (min-width: $vp-768) {
     margin: -20px 0 0 0;
   }
 
@@ -27,39 +27,31 @@
 
 .wrapper__features {
   @media (max-width: $vp-768) {
-  padding: 0;
+    padding: 0;
   }
 
-  @media (min-width: $vp-768){
-
-  }
 
   @media (min-width: $vp-1024) {
     padding: 30px 0 10px 0;
-  }
-
-  @media (min-width: $vp-1920) {
-
   }
 }
 
 .wrapper__about {
   @media (max-width: $vp-768) {
-    padding: 0px 0 77px 0;
+    padding: 0 0 77px 0;
   }
 
-  @media (min-width: $vp-768){
+  @media (min-width: $vp-768) {
     padding: 0 0 45px 0;
   }
 
   @media (min-width: $vp-1024) {
-    padding: 10px 0 85px 0;
+    padding: 10px 0 90px 0;
   }
 
   @media (min-width: $vp-1920) {
-    padding: 10px 0 85px 0;
+    padding: 10px 0 90px 0;
   }
-
 }
 
 .wrapper__catalog {
@@ -67,7 +59,7 @@
     padding: 25px 0 84px 0;
   }
 
-  @media (min-width: $vp-768){
+  @media (min-width: $vp-768) {
     padding: 30px 0 75px 0;
   }
 
@@ -78,7 +70,6 @@
   @media (min-width: $vp-1920) {
     padding: 30px 0 20px 0;
   }
-
 }
 
 .wrapper__footer {
@@ -86,16 +77,33 @@
     padding: 35px 0;
   }
 
-  @media (min-width: $vp-768){
+  @media (min-width: $vp-768) {
     padding: 50px 0;
   }
 
   @media (min-width: $vp-1024) {
     padding: 0;
   }
+}
 
-  @media (min-width: $vp-1920) {
+.wrapper__modal-window {
+  left: 50%;
+  transform: translateX(-50%) !important;
 
+  @media (max-width: $vp-768) {
+    z-index: 10;
+    top: 19.01vw;
   }
 
+  @media (min-width: $vp-768) {
+    top: 19.01vw;
+  }
+
+  @media (min-width: $vp-1024) {
+    top: 7.6vw;
+  }
+
+  @media (min-width: $vp-1920) {
+    top: 146px;
+  }
 }

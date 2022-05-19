@@ -1,14 +1,14 @@
 .about__container {
-  @media (max-width: $vp-768) {
+  box-sizing: border-box;
 
-  }
 
-  @media (min-width: $vp-768)  {
+  @media (min-width: $vp-768) {
     padding: 10px 0 0 175px;
     background: url("../../img/template-images/about-background.jpg") no-repeat;
     min-height: 380px;
     //background-size: 19.84vw;
     background-size: 150px 320px;
+
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background: url("../../img/template-images/about-background@2x.jpg") no-repeat;
       //background-size: 19.84vw;
@@ -22,6 +22,7 @@
     min-height: 320px;
     //background-size: 7.81vw;
     background-size: 150px 320px;
+
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background: url("../../img/template-images/about-background@2x.jpg") no-repeat top 0 left 0;
       //background-size: 7.81vw;
@@ -53,7 +54,7 @@
     color: #041827;
   }
 
-  @media (min-width: $vp-768)  {
+  @media (min-width: $vp-768) {
     font-style: normal;
     font-weight: 400;
     font-size: 36px;
@@ -69,19 +70,15 @@
     font-weight: 400;
     font-size: 33px;
     line-height: 51px;
-
+    padding: 0;
     color: #041827;
     margin: 26px 0 0;
-  }
-
-  @media (min-width: $vp-1920) {
-
   }
 }
 
 .about__content {
   @media (max-width: $vp-768) {
-    font-family: 'PT Mono', "Arial",sans-serif;
+    font-family: "PT Mono", "Arial", sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -89,18 +86,17 @@
     margin: 16px 0 15px;
   }
 
-  @media (min-width: $vp-768)  {
-    font-family: 'PT Mono', "Arial",sans-serif;
+  @media (min-width: $vp-768) {
+    font-family: "PT Mono", "Arial", sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 22px;
     margin: 15px 0 0;
-
   }
 
   @media (min-width: $vp-1024) {
-    font-family: 'PT Mono', "Arial",sans-serif;
+    font-family: "PT Mono", "Arial", sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -113,8 +109,13 @@
   }
 }
 
+.about__content--closed {
+  display: none;
+}
+
 .about__button {
   box-shadow: none;
+  cursor: pointer;
 
   @media (max-width: $vp-768) {
     font-size: 12px;
@@ -123,8 +124,8 @@
     letter-spacing: 0.05em;
     text-transform: uppercase;
 
-    color: #00B2FF;
-    border: 1px solid #00B2FF;
+    color: #00b2ff;
+    border: 1px solid #00b2ff;
     border-radius: 3px;
     padding: 10px 40px;
     background: #ffffff;
@@ -132,15 +133,15 @@
     margin: 0;
   }
 
-  @media (min-width: $vp-768){
+  @media (min-width: $vp-768) {
     font-size: 12px;
     line-height: 16px;
     text-align: center;
     letter-spacing: 0.05em;
     text-transform: uppercase;
 
-    color: #00B2FF;
-    border: 1px solid #00B2FF;
+    color: #00b2ff;
+    border: 1px solid #00b2ff;
     border-radius: 3px;
     padding: 15px 50px;
     background: #ffffff;
@@ -155,16 +156,12 @@
     letter-spacing: 0.05em;
     text-transform: uppercase;
 
-    color: #00B2FF;
-    border: 1px solid #00B2FF;
+    color: #00b2ff;
+    border: 1px solid #00b2ff;
     border-radius: 3px;
     padding: 15px 50px;
     background: #ffffff;
     outline: none;
-    margin: 30px 0 30px 0;
+    margin: 35px 0 30px 0;
   }
-
-  @media (min-width: $vp-1920) {
-  }
-
 }

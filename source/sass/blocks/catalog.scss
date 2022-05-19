@@ -1,12 +1,6 @@
 .catalog {
   background: #041827;
-  @media (max-width: $vp-768) {
 
-  }
-
-  @media (min-width: $vp-768)  {
-
-  }
 
   @media (min-width: $vp-1024) {
     min-height: 50vw;
@@ -15,7 +9,6 @@
   @media (min-width: $vp-1920) {
     min-height: 960px;
   }
-
 }
 
 .catalog__title {
@@ -23,21 +16,19 @@
     font-style: normal;
     font-weight: 400;
     font-size: 25px;
-    line-height:  40px;
+    line-height: 40px;
     /* or 39px */
 
-
-    color: #FFFFFF;
-
+    color: #ffffff;
   }
 
-  @media (min-width: $vp-768)  {
+  @media (min-width: $vp-768) {
     font-style: normal;
     font-weight: 400;
     font-size: 32px;
     line-height: 51px;
 
-    color: #FFFFFF;
+    color: #ffffff;
   }
 
   @media (min-width: $vp-1024) {
@@ -46,7 +37,7 @@
     font-size: 32px;
     line-height: 51px;
 
-    color: #FFFFFF;
+    color: #ffffff;
     margin: 35px 0;
   }
 }
@@ -65,7 +56,7 @@
     gap: 30px;
   }
 
-  @media (min-width: $vp-768)  {
+  @media (min-width: $vp-768) {
     padding-top: 10px;
     gap: 30px;
   }
@@ -93,7 +84,7 @@
     height: 250px;
   }
 
-  @media (min-width: $vp-768)  {
+  @media (min-width: $vp-768) {
     width: 670px;
     height: 250px;
   }
@@ -111,11 +102,11 @@
 
 .catalog__link::before {
   position: absolute;
-  content: '';
+  content: "";
   right: 0;
   bottom: 0;
-  background: #00B2FF url("../../img/svg/card-triangle.svg") center center no-repeat;
-z-index: 2;
+  background: #00b2ff url("../../img/svg/card-triangle.svg") center center no-repeat;
+  z-index: 2;
   border-radius: 3px 0 0 0;
 
   @media (max-width: $vp-768) {
@@ -123,28 +114,19 @@ z-index: 2;
     height: 40px;
   }
 
-  @media (min-width: $vp-768){
+  @media (min-width: $vp-768) {
     width: 60px;
     height: 60px;
   }
-
-  @media (min-width: $vp-1024) {
-
-
-  }
-
-  @media (min-width: $vp-1920) {
-
-  }
-
 }
 
 .catalog__link-text {
   position: absolute;
-  color: #FFFFFF;
+  color: #ffffff;
+
   &::-webkit-scrollbar {
-  display: none;
-}
+    display: none;
+  }
 
   @media (max-width: $vp-768) {
     width: 270px;
@@ -154,9 +136,9 @@ z-index: 2;
     font-weight: 400;
     font-size: 17px;
     line-height: 30px;
-}
+  }
 
-  @media (min-width: $vp-768){
+  @media (min-width: $vp-768) {
     width: 670px;
     height: 250px;
     padding: 40px 45px;
@@ -177,16 +159,13 @@ z-index: 2;
     font-size: 18px;
     line-height: 30px;
     /* or 150% */
-
   }
 
   @media (min-width: $vp-1920) {
     width: 350px;
     height: 650px;
     padding: 45px 40px;
-
   }
-
 }
 
 .catalog__image-wrapper {
@@ -195,7 +174,7 @@ z-index: 2;
     min-height: 75.99vw;
   }
 
-  @media (min-width: $vp-768)  {
+  @media (min-width: $vp-768) {
     width: 87.01vw;
     min-height: 32.47px;
   }

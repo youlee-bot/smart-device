@@ -1,6 +1,4 @@
 .contacts-form {
-  -moz-user-select: none;
-  -khtml-user-select: none;
   user-select: none;
   display: grid;
 
@@ -8,7 +6,7 @@
     margin: 32px 0;
   }
 
-  @media (min-width: $vp-768)  {
+  @media (min-width: $vp-768) {
     grid-template-areas: "name phone" " textarea textarea" "button checkbox";
     margin: 2.59vw 0;
   }
@@ -16,17 +14,13 @@
   @media (min-width: $vp-1024) {
     margin: 38px 0;
   }
-
-  @media (min-width: $vp-1920) {
-
-  }
 }
 
 .contacts-form__input {
-  background: #019BDF;
+  background: #019bdf;
   border-radius: 3px;
   border: none;
-  color: #FFFFFF;
+  color: #ffffff;
 
   @media (max-width: $vp-768) {
     width: 100%;
@@ -34,7 +28,7 @@
     text-indent: 12px;
   }
 
-  @media (min-width: $vp-768)  {
+  @media (min-width: $vp-768) {
     width: 41.55vw;
     height: 6.49vw;
     text-indent: 12px;
@@ -44,20 +38,16 @@
     width: 275px;
     height: 50px;
   }
-
-  @media (min-width: $vp-1920) {
-
-  }
 }
 
 .contacts-form__input::placeholder {
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 16px;
   line-height: 22px;
 }
 
 .contacts-form__textarea {
-  background: #019BDF;
+  background: #019bdf;
   border-radius: 3px;
   border: none;
 
@@ -67,7 +57,7 @@
     height: 180px;
   }
 
-  @media (min-width: $vp-768)  {
+  @media (min-width: $vp-768) {
     width: 100%;
     padding: 32px 17px;
     height: 158px;
@@ -78,9 +68,6 @@
     width: 100%;
     padding: 22px 17px;
   }
-
-  @media (min-width: $vp-1920) {
-  }
 }
 
 .contacts-form__textarea::placeholder {
@@ -90,11 +77,7 @@
 }
 
 .contacts-form__name-wrapper {
-  @media (max-width: $vp-768) {
-
-  }
-
-  @media (min-width: $vp-768)  {
+  @media (min-width: $vp-768) {
     grid-area: name;
   }
 
@@ -112,7 +95,7 @@
     margin-top: 20px;
   }
 
-  @media (min-width: $vp-768)  {
+  @media (min-width: $vp-768) {
     grid-area: phone;
     margin-left: 3.89vw;
   }
@@ -125,7 +108,6 @@
   @media (min-width: $vp-1920) {
     margin-left: 30px;
   }
-
 }
 
 .contacts-form__textarea-wrapper {
@@ -133,7 +115,7 @@
     margin-top: 20px;
   }
 
-  @media (min-width: $vp-768)  {
+  @media (min-width: $vp-768) {
     grid-area: textarea;
     margin-top: 20px;
   }
@@ -141,10 +123,6 @@
   @media (min-width: $vp-1024) {
     grid-area: textarea;
   }
-
-  @media (min-width: $vp-1920) {
-  }
-
 }
 
 .contacts-form__button-wrapper {
@@ -152,7 +130,7 @@
     margin-top: 22px;
   }
 
-  @media (min-width: $vp-768)  {
+  @media (min-width: $vp-768) {
     grid-area: button;
     margin-top: 27px;
   }
@@ -161,19 +139,16 @@
     grid-area: button;
     margin-top: 30px;
   }
-
-  @media (min-width: $vp-1920) {
-
-  }
-
 }
 
 .contacts-form__personal-data-wrapper {
+  cursor: pointer;
+
   @media (max-width: $vp-768) {
     margin: 16px 0 0 30px;
   }
 
-  @media (min-width: $vp-768)  {
+  @media (min-width: $vp-768) {
     grid-area: checkbox;
     margin: 28px 0 0 58px;
     width: 28.57vw;
@@ -184,40 +159,35 @@
     margin: 37px 0 0 65px;
     width: auto;
   }
-
-  @media (min-width: $vp-1920) {
-
-  }
-
 }
 
 .contacts-form__personal-data {
-  color: #FFFFFF;
+  color: #ffffff;
   opacity: 0.8;
   position: relative;
+  font-family: "PT Mono", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  cursor: pointer;
 
   @media (max-width: $vp-768) {
-    font-size: 16.5px;
-    line-height: 12px;
+    font-size: 14px;
+    line-height: 5px;
   }
 
-  @media (min-width: $vp-768)  {
-    font-size: 16.5px;
+  @media (min-width: $vp-768) {
+    font-size: 13.5px;
     line-height: 16px;
-
   }
 
   @media (min-width: $vp-1024) {
-    font-size: 16.5px;
+    font-size: 14.5px;
     line-height: 17px;
-  }
-
-  @media (min-width: $vp-1920) {
-
   }
 }
 
 .contacts-form__button {
+  cursor: pointer;
   background: #041427;
   border-radius: 3px;
   color: #ffffff;
@@ -229,10 +199,10 @@
   text-transform: uppercase;
 
   @media (max-width: $vp-768) {
-    padding: 12px 66px;
+    padding: 15px 66px 10px 68px;
   }
 
-  @media (min-width: $vp-768)  {
+  @media (min-width: $vp-768) {
     padding: 12px 65px;
   }
 
@@ -240,47 +210,40 @@
 
     padding: 12px 65px;
   }
+}
 
-  @media (min-width: $vp-1920) {
+.contacts-form__button:hover {
+  @media (min-width: $vp-1024) {
+    transform: scale(102%);
+  }
+}
 
+.contacts-form__button:active {
+  @media (min-width: $vp-1024) {
+    transform: scale(101%);
   }
 }
 
 .contacts-form__personal-data-checkbox {
   display: none;
-  @media (max-width: $vp-768) {
-
-  }
-
-  @media (min-width: $vp-768){
-
-  }
-
-  @media (min-width: $vp-1024) {
-
-  }
-
-  @media (min-width: $vp-1920) {
-
-  }
 }
 
-
-.contacts-form__personal-data-checkbox + .contacts-form__personal-data:before {
+.contacts-form__personal-data-checkbox + .contacts-form__personal-data::before {
   position: absolute;
   content: "";
   width: 14.94px;
   height: 15px;
 
 
-  border: 1px solid #FFFFFF;
+  border: 1px solid #ffffff;
   border-radius: 2px;
+
   @media (max-width: $vp-768) {
     left: - 25px;
     top: 13px;
   }
 
-  @media (min-width: $vp-768){
+  @media (min-width: $vp-768) {
     left: - 30px;
     top: 13px;
   }
@@ -289,14 +252,9 @@
     left: - 25px;
     top: 13px;
   }
-
-  @media (min-width: $vp-1920) {
-
-  }
-
 }
 
-.contacts-form__personal-data-checkbox:checked + .contacts-form__personal-data:after {
+.contacts-form__personal-data-checkbox:checked + .contacts-form__personal-data::after {
   position: absolute;
   content: "";
   width: 6.97px;
@@ -308,7 +266,7 @@
     top: 19px;
   }
 
-  @media (min-width: $vp-768){
+  @media (min-width: $vp-768) {
     left: - 27px;
     top: 19px;
   }
@@ -317,9 +275,4 @@
     left: - 22px;
     top: 19px;
   }
-
-  @media (min-width: $vp-1920) {
-
-  }
-
 }

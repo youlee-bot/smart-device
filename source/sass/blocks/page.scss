@@ -1,5 +1,19 @@
 .page {
   width: 100%;
+  overflow-x: hidden;
+}
+
+.page--dark-background {
+  display: none;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  background: rgba(3, 16, 27, 0.7);
+}
+
+.page--dark-background--active {
+  display: block;
 }
 
 .page__container {
@@ -9,7 +23,7 @@
     width: 84.38vw;
   }
 
-  @media (min-width: $vp-768)  {
+  @media (min-width: $vp-768) {
     width: 87.01vw;
   }
 
@@ -37,10 +51,10 @@
   grid-area: title;
   font-weight: 700;
   font-size: 25px;
-  line-height: 29px;
-  color: #F2F5F7;
-  padding: 5px 0 0 2px;
-  font-family: 'Roboto Condensed', Arial sans-serif;
+  line-height: 25px;
+  color: #f2f5f7;
+  padding: 6px 0 0 2px;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
   font-style: normal;
   margin: 0;
 }
@@ -52,5 +66,9 @@
   font-size: 12px;
   line-height: 14px;
   color: rgba(255, 255, 255, 0.7);
-  padding: 0px 0 0 2px;
+  padding: 0 0 0 2px;
+}
+
+.page__invalid-input {
+  outline: 2px solid #ff0000;
 }
