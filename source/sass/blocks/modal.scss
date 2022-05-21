@@ -24,6 +24,7 @@
   -ms-overflow-style: none;
   scrollbar-width: none;
 
+
   &::-webkit-scrollbar {
     display: none;
   }
@@ -109,7 +110,7 @@
   }
 
   &.is-active {
-    transform: scale(1);
+    transform: translateX(-50%);
     visibility: visible;
     opacity: 1;
 

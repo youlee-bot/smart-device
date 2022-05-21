@@ -88,7 +88,6 @@
 
 .wrapper__modal-window {
   left: 50%;
-  transform: translateX(-50%) !important;
 
   @media (max-width: $vp-768) {
     z-index: 10;

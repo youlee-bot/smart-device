@@ -3,7 +3,7 @@
   overflow-x: hidden;
 }
 
-.page--dark-background {
+.page__dark-background {
   display: none;
   position: fixed;
   width: 100vw;
@@ -12,7 +12,7 @@
   background: rgba(3, 16, 27, 0.7);
 }
 
-.page--dark-background--active {
+.page__dark-background--active {
   display: block;
 }
 
@@ -48,31 +48,40 @@
 }
 
 .page__logo-title {
-  grid-area: title;
-  font-weight: 700;
-  font-size: 25px;
-  line-height: 25px;
-  color: #f2f5f7;
-  padding: 6px 0 0 2px;
-  font-family: "Roboto Condensed", "Arial", sans-serif;
-  font-style: normal;
-  margin: 0;
+  span {
+    grid-area: title;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 25px;
+    color: #f2f5f7;
+    padding: 6px 0 0 2px;
+    font-family: "Roboto Condensed", "Arial", sans-serif;
+    font-style: normal;
+    margin: 0;
+  }
 }
 
 .page__logo-description {
-  margin: 0;
-  grid-area: description;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 14px;
-  color: rgba(255, 255, 255, 0.7);
-  padding: 0 0 0 2px;
+  span {
+    margin: 0;
+    grid-area: description;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    padding: 0 0 0 2px;
+  }
+}
+
+.page__input:focus {
+  border: none;
+  outline: none;
 }
 
 .page__invalid-input {
   outline: 2px solid #ff0000;
 }
 
-.page__invalid-input[type="checkbox"]+label {
+.page__invalid-input[type="checkbox"] + label {
   outline: 2px solid #ff0000;
 }

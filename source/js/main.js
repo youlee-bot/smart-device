@@ -8,7 +8,7 @@ const modalWindow = document.querySelector('[data-modal="modal-window"]');
 const contactForms = document.querySelectorAll('[data-page="form"]');
 
 window.addEventListener('DOMContentLoaded', () => {
-  const darkBackground = document.querySelector('.page--dark-background');
+  const darkBackground = document.querySelector('.page__dark-background');
   iosVhFix();
 
   const inputElements = document.querySelectorAll('.page__phone-input');
@@ -19,7 +19,10 @@ window.addEventListener('DOMContentLoaded', () => {
     const maskOptions = {
       mask: '+{7}(000)000-00-00',
     };
-    IMask(input, maskOptions);
+    const result = new IMask(input, maskOptions);
+    if (!result) {
+      return;
+    }
   });
 
   window.addEventListener('load', () => {
@@ -27,14 +30,14 @@ window.addEventListener('DOMContentLoaded', () => {
 
     const onEscButtonPress = (evt) => {
       if (evt.key === 'Escape') {
-        darkBackground.classList.remove('page--dark-background--active');
+        darkBackground.classList.remove('page__dark-background--active');
         document.removeEventListener('keydown', onEscButtonPress);
       }
     };
 
     const onCloseButtonClick = () => {
       modals.close('modal-window');
-      darkBackground.classList.remove('page--dark-background--active');
+      darkBackground.classList.remove('page__dark-background--active');
       darkBackground.removeEventListener('click', onCloseButtonClick);
     };
 
@@ -44,10 +47,11 @@ window.addEventListener('DOMContentLoaded', () => {
         element.value = '';
         element.classList.remove('page__invalid-input');
       });
-      darkBackground.classList.add('page--dark-background--active');
+      darkBackground.classList.add('page__dark-background--active');
       darkBackground.addEventListener('click', onCloseButtonClick);
       document.addEventListener('keydown', onEscButtonPress);
-      document.querySelector('[data-modal-close="modal-close"]').addEventListener('click', onCloseButtonClick);
+      modalWindow.querySelector('[data-modal-close="modal-close"]').addEventListener('click', onCloseButtonClick);
+      document.querySelector('.modal-window__phone').focus();
     };
     document.querySelector('[data-modal-button="open-modal-button"]').addEventListener('click', onOpenButtonClick);
   });
