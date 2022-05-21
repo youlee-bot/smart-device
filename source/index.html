@@ -284,14 +284,14 @@
             <h2 class="contacts__title">Остались вопросы? Задайте их нам!</h2>
             <p class="contacts__content">Мы проконсультируем Вас бесплатно</p>
 
-            <form data-page="form" class="contacts__form contacts-form" action="https://echo.htmlacademy.ru/" method="post">
+            <form data-page="form" class="contacts__form contacts-form" action="https://echo.htmlacademy.ru/" method="post" novalidate>
               <div class="contacts-form__name-wrapper">
-                <input data-form="contacts-form-name" class="contacts-form__name contacts-form__input" type="text" name="name-field" id="name-field"
+                <input data-form="contacts-form-name" class="contacts-form__name contacts-form__input page__name-input" type="text" name="name-field" id="name-field"
                        placeholder="Имя" required>
                 <label for="name-field" class="visually-hidden">Имя</label>
               </div>
               <div class="contacts-form__phone-wrapper">
-                <input data-form="contacts-form-phone" class="contacts-form__phone contacts-form__input" type="text" name="phone-field" id="phone-field"
+                <input data-form="contacts-form-phone" class="contacts-form__phone contacts-form__input page__phone-input" type="text" name="phone-field" id="phone-field"
                        placeholder="Телефон" required>
                 <label for="phone-field" class="visually-hidden">Телефон</label>
               </div>
@@ -304,7 +304,7 @@
                 <button class="contacts-form__button" type="submit">Задать вопрос</button>
               </div>
               <div class="contacts-form__personal-data-wrapper">
-                <input class="contacts-form__personal-data-checkbox" type="checkbox" name="personal-data"
+                <input class="contacts-form__personal-data-checkbox page__personal-data-input" type="checkbox" name="personal-data"
                        id="personal-data">
                 <label class="contacts-form__personal-data" for="personal-data">Я согласен на обработку персональных
                   данных</label>
@@ -411,14 +411,14 @@
       class="visually-hidden">Закрыть</span></button>
     <h2 class="modal-window__title">Закажите звонок</h2>
     <p class="modal-window__description">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
-    <form data-page="form" class="modal-window__form" action="https://echo.htmlacademy.ru/" method="post">
+    <form data-page="form" class="modal-window__form" action="https://echo.htmlacademy.ru/" method="post" novalidate>
       <div class="modal-window__name-wrapper">
-        <input class="modal-window__name modal-window__input" type="text" name="name-field" id="modal-name-field"
+        <input class="modal-window__name modal-window__input page__name-input" type="text" name="name-field" id="modal-name-field"
                placeholder="Имя" required>
         <label for="modal-name-field" class="visually-hidden">Имя</label>
       </div>
       <div class="modal-window__phone-wrapper">
-        <input class="modal-window__phone modal-window__input" type="text" name="phone-field" id="modal-phone-field"
+        <input class="modal-window__phone modal-window__input page__phone-input" type="text" name="phone-field" id="modal-phone-field"
                placeholder="Телефон" required>
         <label for="modal-phone-field" class="visually-hidden">Телефон</label>
       </div>
@@ -431,7 +431,7 @@
         <button class="modal-window__button" type="submit">Отправить</button>
       </div>
       <div class="modal-window__personal-data-wrapper">
-        <input class="modal-window__personal-data-checkbox" type="checkbox" name="personal-data"
+        <input class="modal-window__personal-data-checkbox page__personal-data-input" type="checkbox" name="personal-data"
                id="modal-personal-data">
         <label class="modal-window__personal-data" for="modal-personal-data">Я согласен на обработку персональных
           данных</label>

@@ -802,6 +802,10 @@ button,
   outline: 2px solid #ff0000;
 }
 
+.page__invalid-input[type="checkbox"] + label {
+  outline: 2px solid #ff0000;
+}
+
 .header {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(84.9%, #041827), to(rgba(4, 24, 39, 0)));
   background: -o-linear-gradient(top, #041827 84.9%, rgba(4, 24, 39, 0) 100%);

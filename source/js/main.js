@@ -1,16 +1,26 @@
 import {iosVhFix} from './utils/ios-vh-fix';
-import {initModals, modals} from './modules/modals/init-modals';
-const settings = {
-  tempAboutTextStorage: '',
-};
 
-const textBlocks = document.querySelectorAll('[data-about="text-block"]');
-const aboutButton = document.querySelector('[data-about="button"]');
+import {initModals, modals} from './modules/modals/init-modals';
+import IMask from 'imask';
+import {aboutBlock} from './modules/blocks/about.block';
+
 const modalWindow = document.querySelector('[data-modal="modal-window"]');
+const contactForms = document.querySelectorAll('[data-page="form"]');
 
 window.addEventListener('DOMContentLoaded', () => {
   const darkBackground = document.querySelector('.page--dark-background');
   iosVhFix();
+
+  const inputElements = document.querySelectorAll('.page__phone-input');
+  contactForms.forEach((contactForm) => {
+    contactForm.addEventListener('submit', onModalSubmit);
+  });
+  inputElements.forEach((input) => {
+    const maskOptions = {
+      mask: '+{7}(000)000-00-00',
+    };
+    IMask(input, maskOptions);
+  });
 
   window.addEventListener('load', () => {
     initModals();
@@ -22,7 +32,7 @@ window.addEventListener('DOMContentLoaded', () => {
       }
     };
 
-    const onCloseButtonClick = (evt) => {
+    const onCloseButtonClick = () => {
       modals.close('modal-window');
       darkBackground.classList.remove('page--dark-background--active');
       darkBackground.removeEventListener('click', onCloseButtonClick);
@@ -32,6 +42,7 @@ window.addEventListener('DOMContentLoaded', () => {
       modals.open('modal-window');
       modalWindow.querySelectorAll('input').forEach((element) => {
         element.value = '';
+        element.classList.remove('page__invalid-input');
       });
       darkBackground.classList.add('page--dark-background--active');
       darkBackground.addEventListener('click', onCloseButtonClick);
@@ -40,81 +51,32 @@ window.addEventListener('DOMContentLoaded', () => {
     };
     document.querySelector('[data-modal-button="open-modal-button"]').addEventListener('click', onOpenButtonClick);
   });
-
 });
 
-if (window.window.innerWidth < 768) {
-  document.querySelector('.intro__button').textContent = ('бесплатная консультация');
-  document.querySelector('.catalog__title').textContent = ('Товары и услуги Smart\u00A0Device');
-  settings.tempAboutTextStorage = textBlocks[1].textContent;
-  textBlocks[1].textContent = settings.tempAboutTextStorage.slice(0, 109);
-
-  const accordions = document.querySelectorAll('[data-footer="accordion"]');
-
-  const closeAllAccordions = () => {
-    accordions.forEach((accordion) => {
-      accordion.classList.add('footer__accordion--is-closed');
-    });
-  };
-
-  const onAccordionClick = (evt) => {
-    const accordionContainer = evt.target.closest('div');
-    if (!accordionContainer.classList.contains('footer__accordion--is-closed')) {
-      accordionContainer.classList.add('footer__accordion--is-closed');
-      return;
-    }
-    closeAllAccordions();
-    accordionContainer.classList.remove('footer__accordion--is-closed');
-  };
-
-  accordions.forEach((accordion) => {
-    accordion.addEventListener('click', onAccordionClick);
-  });
-
-  closeAllAccordions();
-}
-
-const onAboutButtonClick = () => {
-  textBlocks.forEach((textBlock, index) => {
-    if (index > 1) {
-      textBlock.classList.toggle('about__content--closed');
-    }
-  });
-  if (aboutButton.textContent === 'Подробнее') {
-    aboutButton.textContent = 'Скрыть';
-    if (window.window.innerWidth < 768) {
-      textBlocks[1].textContent = settings.tempAboutTextStorage;
-    }
-
-  } else {
-    aboutButton.textContent = 'Подробнее';
-    if (window.window.innerWidth < 768) {
-      textBlocks[1].textContent = settings.tempAboutTextStorage.slice(0, 109);
-    }
-
-  }
-};
-
-aboutButton.addEventListener('click', onAboutButtonClick);
-
-const contactForms = document.querySelectorAll('[data-page="form"]');
+aboutBlock();
 
 const onModalSubmit = (evt) => {
   const currentForm = evt.target.closest('form');
-
   evt.preventDefault();
-  const regexpTel = /^\d+$/;
+  const regexpTel = /^(\+7)[\s(]*\d{3}[)\s]*\d{3}[\s-]?\d{2}[\s-]?\d{2}/;
   const regexpName = /^[А-Яа-яa-zA-Z\s]*$/;
-  const name = currentForm.querySelector('[data-form="contacts-form-name"]');
-  const phone = currentForm.querySelector('[data-form="contacts-form-phone"]');
+
+  const name = currentForm.querySelector('.page__name-input');
+  const phone = currentForm.querySelector('.page__phone-input');
+  const personalData = currentForm.querySelector('.page__personal-data-input');
 
   name.classList.remove('page__invalid-input');
   phone.classList.remove('page__invalid-input');
+  personalData.classList.remove('page__invalid-input');
 
   let valid = true;
   let phoneNumbers = phone.value;
 
-  if (!regexpName.test(name.value)) {
+  if (personalData.checked !== true) {
+    personalData.classList.add('page__invalid-input');
+    valid = false;
+  }
+  if ((!regexpName.test(name.value)) || (name.value.length === 0)) {
     name.classList.add('page__invalid-input');
     valid = false;
   }
@@ -122,7 +84,7 @@ const onModalSubmit = (evt) => {
     phone.classList.add('page__invalid-input');
     valid = false;
   }
-  if (phoneNumbers.replace(/[^0-9\.]+/g, '').length > 10) {
+  if (phoneNumbers.length > 16) {
     phone.classList.add('page__invalid-input');
     valid = false;
   }
@@ -133,14 +95,9 @@ const onModalSubmit = (evt) => {
   }
 };
 
-contactForms.forEach((contactForm) => {
-  contactForm.addEventListener('submit', onModalSubmit);
-});
-
-
 const smoothLinks = document.querySelectorAll('[data-page="smooth-link"]');
 for (let smoothLink of smoothLinks) {
-  smoothLink.addEventListener('click', function (e) {
+  smoothLink.addEventListener('click', (e) => {
     e.preventDefault();
     const targetLink = smoothLink.getAttribute('href').replace('#', '.');
     if (targetLink !== '.') {

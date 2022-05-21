@@ -72,3 +72,7 @@
 .page__invalid-input {
   outline: 2px solid #ff0000;
 }
+
+.page__invalid-input[type="checkbox"]+label {
+  outline: 2px solid #ff0000;
+}
