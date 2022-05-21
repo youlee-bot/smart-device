@@ -176,7 +176,6 @@
     margin: 0;
     padding: 20px 0 22px 23px;
     border: 1px solid rgba(248, 253, 255, 0.7);
-    border-bottom: none;
     position: relative;
     box-sizing: border-box;
     overflow: hidden;
@@ -195,6 +194,7 @@
 
   @media (min-width: $vp-1024) {
     writing-mode: horizontal-tb;
+    border: none;
   }
 }
 

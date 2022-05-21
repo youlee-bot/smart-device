@@ -15,8 +15,8 @@
     min-height: 840px;
     width: 100vw;
     margin: 0 auto 0 auto;
-    background: url("../../img/svg/paper-plane.svg") no-repeat 346px 252px,
-      url("../../img/svg/Polygon.svg")  no-repeat 0 -77px;
+    background: url("../img/svg/paper-plane.svg") no-repeat 346px 252px,
+      url("../img/svg/Polygon.svg")  no-repeat 0 -77px;
     background-blend-mode: lighten;
   }
 
@@ -25,7 +25,7 @@
     min-height: 840px;
     width: 1920px;
 
-    background: url("../../img/svg/paper-plane.svg") no-repeat 350px 246px,
+    background: url("../img/svg/paper-plane.svg") no-repeat 350px 246px,
       linear-gradient(139.2deg, rgba(4, 24, 39, 0.5) 0%, rgba(4, 24, 39, 0.5) 35%, rgba(9, 15, 125, 0) 35%, rgba(0, 212, 255, 0) 100%) -35px no-repeat;
     background-blend-mode: lighten;
   }

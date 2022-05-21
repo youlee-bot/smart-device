@@ -4,13 +4,13 @@
 
   @media (min-width: $vp-768) {
     padding: 10px 0 0 175px;
-    background: url("../../img/template-images/about-background.jpg") no-repeat;
+    background: url("../img/template-images/about-background.jpg") no-repeat;
     min-height: 380px;
     //background-size: 19.84vw;
     background-size: 150px 320px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background: url("../../img/template-images/about-background@2x.jpg") no-repeat;
+      background: url("../img/template-images/about-background@2x.jpg") no-repeat;
       //background-size: 19.84vw;
       background-size: 150px 320px;
     }
@@ -18,13 +18,13 @@
 
   @media (min-width: $vp-1024) {
     padding: 0 0 0 250px;
-    background: url("../../img/template-images/about-background.jpg") no-repeat top left 0;
+    background: url("../img/template-images/about-background.jpg") no-repeat top left 0;
     min-height: 320px;
     //background-size: 7.81vw;
     background-size: 150px 320px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background: url("../../img/template-images/about-background@2x.jpg") no-repeat top 0 left 0;
+      background: url("../img/template-images/about-background@2x.jpg") no-repeat top 0 left 0;
       //background-size: 7.81vw;
       background-size: 150px 320px;
     }
@@ -32,11 +32,11 @@
 
   @media (min-width: $vp-1920) {
     padding: 0 0 0 250px;
-    background: url("../../img/template-images/about-background.jpg") no-repeat top 0 left 0;
+    background: url("../img/template-images/about-background.jpg") no-repeat top 0 left 0;
     background-size: 150px 320px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background: url("../../img/template-images/about-background@2x.jpg") no-repeat top 0 left 0;
+      background: url("../img/template-images/about-background@2x.jpg") no-repeat top 0 left 0;
       background-size: 150px 320px;
     }
   }
